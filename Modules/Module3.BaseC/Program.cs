@@ -8,7 +8,6 @@
             MyName = "NewSuperJane";
             Console.WriteLine(MyName);
 
-
             Console.ReadKey();
         }
     }
