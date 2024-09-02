@@ -19,6 +19,16 @@
             double result5 = 10.0 / 4.0;
             Console.WriteLine("10.0 / 4.0 = {0}", result5);
 
+            int counter = 10;
+            Console.WriteLine("Value: {0} Increment: {1}", counter, ++counter);
+
+            int counter2 = 10;
+            Console.WriteLine("Value: {0} Increment: {1}", counter2, counter2++);
+
+            int counter3 = 10;
+            Console.WriteLine("Value : {0} Increment: {1}", counter3, counter3++);
+            Console.WriteLine("Value : {0} Increment: {1}", counter3, counter3++);
+
             Console.ReadKey();
         }
 
