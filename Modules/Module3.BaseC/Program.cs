@@ -4,30 +4,14 @@
     {
         static void Main(string[] args)
         {
-            double result = 10 / 4;
-            Console.WriteLine("10 / 4 = {0}", result);
+            double result = 10.0 * 2.0 / 5.0;
+            Console.WriteLine("Value: {0}", result);
 
-            double result2 = 14 % 7;
-            Console.WriteLine("14 % 7 = {0}", result2);
+            double result2 = 5.0 / 2.0 * 3.0;
+            Console.WriteLine("Value: {0}", result2);
 
-            double result3 = 14 / 7;
-            Console.WriteLine("14 / 7 = {0}", result3);
-
-            double result4 = 14.0 / 7.0;
-            Console.WriteLine("14.0 / 7.0 = {0}", result4);
-
-            double result5 = 10.0 / 4.0;
-            Console.WriteLine("10.0 / 4.0 = {0}", result5);
-
-            int counter = 10;
-            Console.WriteLine("Value: {0} Increment: {1}", counter, ++counter);
-
-            int counter2 = 10;
-            Console.WriteLine("Value: {0} Increment: {1}", counter2, counter2++);
-
-            int counter3 = 10;
-            Console.WriteLine("Value : {0} Increment: {1}", counter3, counter3++);
-            Console.WriteLine("Value : {0} Increment: {1}", counter3, counter3++);
+            double result3 = 10 % 3;
+            Console.WriteLine("Value: {0}", result3);
 
             Console.ReadKey();
         }
