@@ -4,23 +4,27 @@
     {
         static void Main(string[] args)
         {
-            string MyName = "Jane";
-            byte MyAge = 27;
-            bool IHaveAPet = true;
-            double MyShoeSize = 37.5;
+            string MyName = "Евгения";
+            Console.WriteLine("Привет, мир");
+            Console.WriteLine();
+            Console.WriteLine("Меня зовут {0}", MyName);
+
+            //0 — позиция нашей переменной. То есть переменная будет на позиции 0.
+
+
+            //Также мы можем вставить в строку не переменную, а строковый литерал:
+            Console.WriteLine("Меня зовут {0}", "Маша");
+
+
+            //И, естественно, мы можем использовать несколько переменных при выводе. В этом случае располагаем их в порядке нумерации «мест».
+            var age = 27;
+            var weight = 50;
             
-            Console.WriteLine($"My name is {MyName}");
-            Console.WriteLine($"My age is {MyAge}");
-            Console.WriteLine($"Do I have a pet? {IHaveAPet}");
-            Console.WriteLine($"My shoe size is {MyShoeSize}");
+            Console.WriteLine("Возраст {0} \n Вес {1}", age, weight);
 
-            Console.WriteLine("IntMin {0} ", int.MinValue);
-            Console.WriteLine("IntMax {0} ", int.MaxValue);
-
-
-            DaysOfWeekTo MyFavoriteDay;
-            MyFavoriteDay = DaysOfWeekTo.Friday;
-            Console.WriteLine(MyFavoriteDay);
+            string favcolor = "black";
+            string name = "Jane";
+            Console.WriteLine("{0}\n  {1} \n {2}", name, age, favcolor);
 
 
             Console.ReadKey();
