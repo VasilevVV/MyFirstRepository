@@ -4,14 +4,17 @@
     {
         static void Main(string[] args)
         {
-            double result = 10.0 * 2.0 / 5.0;
-            Console.WriteLine("Value: {0}", result);
 
-            double result2 = 5.0 / 2.0 * 3.0;
-            Console.WriteLine("Value: {0}", result2);
+            Console.Write("Введите имя: ");
+            var name = Console.ReadLine();
 
-            double result3 = 10 % 3;
-            Console.WriteLine("Value: {0}", result3);
+            var age = checked((byte)int.Parse(Console.ReadLine()));
+            Console.WriteLine("Your name is {0} and age is {1} ", name, age);
+
+            Console.Write("What is your favorite day of week? ");
+
+            var day = (DayOfWeek)int.Parse(Console.ReadLine());
+            Console.WriteLine("Your favorite day is {0}", day);
 
             Console.ReadKey();
         }
