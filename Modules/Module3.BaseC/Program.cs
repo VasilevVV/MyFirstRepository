@@ -4,62 +4,36 @@
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы");
 
-            Console.Write("Введите имя: ");
-            var name = Console.ReadLine();
+            var color = Console.ReadLine();
 
-            var age = checked((byte)int.Parse(Console.ReadLine()));
-            Console.WriteLine("Your name is {0} and age is {1} ", name, age);
+            if (color == "red")
+            {
+                Console.BackgroundColor = ConsoleColor.Red;
+                Console.ForegroundColor = ConsoleColor.Black;
 
-            Console.Write("What is your favorite day of week? ");
+                Console.WriteLine("Your color is red!");
+            }
 
-            var day = (DayOfWeek)int.Parse(Console.ReadLine());
-            Console.WriteLine("Your favorite day is {0}", day);
+            else if (color == "green")
+            {
+                Console.BackgroundColor = ConsoleColor.Green;
+                Console.ForegroundColor = ConsoleColor.Black;
+
+                Console.WriteLine("Your color is green!");
+            }
+            else
+            {
+                Console.BackgroundColor = ConsoleColor.Cyan;
+                Console.ForegroundColor = ConsoleColor.Black;
+
+                Console.WriteLine("Your color is cyan!");
+            }
 
             Console.ReadKey();
         }
 
-
-        /// <summary>
-        /// Аналог системному DayOfWeek
-        /// </summary>
-        enum DaysOfWeek : byte
-        {
-            Monday = 1,
-            Tuesday,
-            Wednesday,
-            Thursday,
-            Friday,
-            Saturday,
-            Sunday
-        }
-
-        /// <summary>
-        /// DaysOfWeek из примера
-        /// </summary>
-        enum DaysOfWeekTo : byte
-        {
-            Tuesday,
-            Monday,
-            Wednesday,
-            Friday
-        }
-
-        /// <summary>
-        /// Светофор
-        /// </summary>
-        enum Semaphore : int
-        {
-            Red = 100,
-            Yellow = 200,
-            Green = 300
-        }
-
-        enum ProgramData
-        {
-            ProgramId = 123,
-            AuthorId = 567
-        }
 
     }
 }
