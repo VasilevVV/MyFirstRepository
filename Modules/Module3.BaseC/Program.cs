@@ -6,7 +6,7 @@
         {
             Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы");
 
-            var color = Console.ReadLine();
+            var color = Console.ReadLine();            
 
             switch (color)
             {
