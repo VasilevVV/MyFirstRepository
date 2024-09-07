@@ -4,47 +4,74 @@
     {
         static void Main(string[] args)
         {
-            
-            Console.WriteLine();
-            int[] arr4312 = new int[] { 5, 6, 9, 1, 2, 3, 4 };
-            Console.WriteLine("Массив который был:");
-            for (int i = 0; i < arr4312.Length; i++)
-            {
-                Console.Write(arr4312[i] + " ");
-            }
-            Console.WriteLine();
+            int[][] array = new int[3][];
 
-            int maxarr4312 = 0;
-            for (int i = 0; i < arr4312.Length; i++)
-            {
-                maxarr4312 += arr4312[i];
-            }
-            Console.WriteLine("Sum: " + maxarr4312);
+            array[0] = new int[2] { 1, 2 };
+            array[1] = new int[3] { 1, 2, 3 };
+            array[2] = new int[5] { 1, 2, 3, 4, 5 };
 
-            Console.WriteLine();
-            for (int i = 0; i < arr4312.Order<int>().Count(); i++)
+            foreach (var arr in array)
             {
-                Console.Write(arr4312.Order<int>().ElementAt(i) + " ");
-            }
-            Console.WriteLine();
-
-            
-
-            Console.WriteLine();
-            for (int i = 0; i < arr4312.Length; i++)
-            {
-                for (int j = i + 1; j < arr4312.Length; j++)
+                foreach (var item in arr)
                 {
-                    if (arr4312[i] > arr4312[j])
-                    {
-                        int temp = arr4312[i];
-                        arr4312[i] = arr4312[j];
-                        arr4312[j] = temp;
-                    }
-                }                
-                Console.Write(arr4312[i] + " ");
+                    Console.Write(item + " ");
+                }
+                Console.WriteLine();
+            }
+
+
+            int[] array4315 = new int[] { 1, 2, 3, 4, 5, -5, 6, 9, 1, 2, -3, 0 };
+            int countPolog = 0;
+
+            foreach (int item in array4315)
+            {
+                Console.Write(item + " ");
+                if (item > 0)
+                {
+                    countPolog++;
+                }
             }
             Console.WriteLine();
+            Console.WriteLine("Количество положительных чисел: " + countPolog);
+
+            Console.WriteLine();
+            int[,] arr4316 = { { -5, 6, 9, 1, 2, -3 }, { -8, 8, 1, 1, 2, -3 } };
+            countPolog = 0;
+            for (int i = 0; i < arr4316.GetLength(0); i++)
+            {
+                for (int j = 0; j < arr4316.GetLength(1); j++)
+                {
+                    Console.Write(arr4316[i,j] + " ");
+                    if (arr4316[i, j] > 0)
+                    {
+                        countPolog++;
+                    }
+                }
+                Console.WriteLine();   
+            }
+            Console.WriteLine();
+            Console.WriteLine("Количество положительных чисел: " + countPolog);
+
+            Console.WriteLine();
+            int[,] arr4317 = { { -5, 6, 9, 1, 2, -3 }, { -8, 8, 1, 1, 2, -3 } };
+            for (int i = 0; i < arr4317.GetLength(0); i++)
+            {
+                for (int j = 0; j < arr4317.GetLength(1); j++)
+                {
+                    for(int k = j + 1; k < arr4317.GetLength(1); k++)
+                    {
+                        if (arr4317[i, k] < arr4317[i, j])
+                        {
+                            int tempArr4317 = arr4317[i, j];
+                            arr4317[i, j] = arr4317[i, k];
+                            arr4317[i, k] = tempArr4317;
+                        }                                               
+                    }
+                    Console.Write(arr4317[i, j] + " ");                    
+                }
+                Console.WriteLine();
+            }
+
 
 
             Console.ReadKey();
