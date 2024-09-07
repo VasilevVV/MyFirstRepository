@@ -14,6 +14,13 @@
             }
             Console.WriteLine();
 
+            int maxarr4312 = 0;
+            for (int i = 0; i < arr4312.Length; i++)
+            {
+                maxarr4312 += arr4312[i];
+            }
+            Console.WriteLine("Sum: " + maxarr4312);
+
             Console.WriteLine();
             for (int i = 0; i < arr4312.Order<int>().Count(); i++)
             {
@@ -21,7 +28,9 @@
             }
             Console.WriteLine();
 
+            
 
+            Console.WriteLine();
             for (int i = 0; i < arr4312.Length; i++)
             {
                 for (int j = i + 1; j < arr4312.Length; j++)
