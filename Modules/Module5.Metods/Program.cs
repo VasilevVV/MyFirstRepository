@@ -55,17 +55,10 @@ namespace Module5.Metods
                 result[i] = int.Parse(Console.ReadLine());
             }
 
-            /*
-            for (int i = 0; i < result.Length; i++)
-            {
-                Console.WriteLine(result[i]);
-            }
-            */
-
             return result;
         }
 
-        static int[] SortArray(int[] result)
+        static int[] SortArrayAsc(int[] result)
         {
             int temp = 0;
             for (int i = 0; i < result.Length; i++)
@@ -83,12 +76,37 @@ namespace Module5.Metods
             return result;
         }
 
+        static int[] SortArrayDesc(int[] result)
+        {
+            int temp = 0;
+            for (int i = 0; i < result.Length; i++)
+            {
+                for (int j = i + 1; j < result.Length; j++)
+                {
+                    if (result[i] < result[j])
+                    {
+                        temp = result[i];
+                        result[i] = result[j];
+                        result[j] = temp;
+                    }
+                }
+            }
+            return result;
+        }
+
+        static void SortArray(in int[] array, out int[] sorteddesc, out int[] sortedasc)
+        {
+            sorteddesc = SortArrayDesc(array);
+            sortedasc = SortArrayAsc(array);
+        }
+
+
         static void ShowArray(int[] arr, bool isSort = false)
         {
             var temp = arr;
-            if (isSort = true)
+            if (isSort == true)
             {
-                temp = SortArray(arr);
+                temp = SortArrayAsc(arr);
             }
 
             foreach (var item in temp)
@@ -98,23 +116,52 @@ namespace Module5.Metods
             Console.WriteLine("");
         }
 
+        static void GetName(ref string name)
+        {
+            Console.WriteLine("Введите имя");
+            name = Console.ReadLine();
+
+        }
+
+        static void ChangeAge(int age)
+        {
+            //Console.WriteLine("Введите возраст");
+            //age = int.Parse(Console.ReadLine());
+            age++;
+        }
+
+        static void BigDataOperation(in int[] arr)
+        {
+            arr[0] = 4;
+        }
+
+
+        static int SumNumbers(ref int num1, in int num2, out int num3, int num4)
+        {
+            var result = num1 + num2;
+            num3 = result;
+
+            return num4 * result;
+        }
 
         static void Main(string[] args)
         {
-            /*
-            var favcolors = new string[3];
+            string someName = "Евгений";
+            Console.WriteLine($"Имя1: {someName}");
+            GetName(ref someName);
+            Console.WriteLine($"Имя2: {someName}");
 
-            for (int i = 0; i < favcolors.Length;i++)
-            {
-                favcolors[i] = ShowColor();
-            }
 
-            ShowColors(favcolors[0], favcolors[2]);
-            */
+            int someAge = 27;
+            Console.WriteLine($"Возраст1: {someAge}");
+            ChangeAge(someAge);
+            Console.WriteLine($"Возраст2: {someAge}");
 
-            var array = GetArrayFromConsole(10);
-            ShowArray(array, true);
-
+            var arr = new int[] { 1, 2, 3 };
+            ShowArray(arr);
+            BigDataOperation(arr);
+            Console.WriteLine(arr[0]);
+            ShowArray(arr);
 
             Console.ReadKey();
         }
