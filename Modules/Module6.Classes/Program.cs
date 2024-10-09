@@ -1,4 +1,6 @@
-﻿namespace Module6.Classes
+﻿using System;
+
+namespace Module6.Classes
 {
     public class Program
     {
@@ -17,10 +19,12 @@
 
         public double Square()
         {
+            return (radius * radius * 3.14);
         }
 
         public double Length()
         {
+            return (2 * 3.14 * radius);
         }
     }
 
@@ -32,10 +36,13 @@
 
         public double Square()
         {
+            double p = (a + b + c) / 2;
+            return Math.Sqrt(p * (p - a) * (p - b) * (p - c)) / 2;
         }
 
         public double Perimeter()
         {
+            return (a + b + c);
         }
     }
 
@@ -43,12 +50,14 @@
     {
         public int side;
 
-        public double Square()
+        public double SquareCalc()
         {
+            return side * side;
         }
 
         public double Perimeter()
         {
+            return side + side + side + side;
         }
     }
 
