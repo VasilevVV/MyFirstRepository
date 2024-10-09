@@ -4,55 +4,52 @@
     {
         static void Main(string[] args)
         {
-            var department = GetCurrentDepartment();
-
-            if (department?.Company?.Type == "Банк" && department?.City?.Name == "Санкт-Петербург")
-            {
-                Console.WriteLine("У банка {0} есть отделение в Санкт-Петербурге", department?.Company?.Name ?? "Неизвестная компания");
-            }
+            
 
             Console.ReadKey();
         }
 
-        static Department GetCurrentDepartment()
+    }
+
+    class Circle
+    {
+        public double radius;
+
+        public double Square()
         {
-            // logic 
+        }
+
+        public double Length()
+        {
         }
     }
 
-    class Bus
+    class Triangle
     {
-        public int? Load;
+        public int a;
+        public int b;
+        public int c;
 
-        public void PrintStatus()
+        public double Square()
         {
-            if (Load.HasValue && Load > 0)
-            {
-                Console.WriteLine("В авбтобусе {0} пассажиров", Load.Value);
-            }
-            else
-            {
-                Console.WriteLine("Автобус пуст!");
-            }
         }
 
+        public double Perimeter()
+        {
+        }
     }
 
-    class Company
+    class Square
     {
-        public string Type;
-        public string Name;
-    }
+        public int side;
 
-    class Department
-    {
-        public Company Company;
-        public City City;
-    }
+        public double Square()
+        {
+        }
 
-    class City
-    {
-        public string Name;
+        public double Perimeter()
+        {
+        }
     }
 
 }
