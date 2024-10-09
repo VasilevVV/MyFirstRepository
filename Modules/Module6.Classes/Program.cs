@@ -7,7 +7,6 @@ namespace Module6.Classes
         static void Main(string[] args)
         {
             
-
             Console.ReadKey();
         }
 
